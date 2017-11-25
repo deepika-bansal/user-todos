@@ -1,0 +1,24 @@
+<p>
+  user-table works!
+</p>
+
+<hr/>
+
+<div class="container">
+  <table class="table table-hover table-striped table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address - City</th>
+      <th>View Todos</th>
+    </tr>
+    <tr *ngFor="let u of users">
+      <td>{{u.id}}</td>
+      <td>{{u.name}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.address.city}}</td>
+      <td><input type="button" value="View Todos" class="btn btn-info"></td>
+    </tr>
+  </table>
+</div>

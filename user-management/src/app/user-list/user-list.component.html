@@ -1,0 +1,19 @@
+<p>
+  user-list works!
+</p>
+
+<hr/>
+
+<div class="container col-md-4" [hidden]="!users">
+  <ul class="list-group">
+    <li *ngFor="let u of users" class="list-group-item">
+      <a [routerLink]="['/users',u.id]">
+        {{u.username}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="container col-md-4" [hidden]="!user">
+  {{user|json}}
+</div>
